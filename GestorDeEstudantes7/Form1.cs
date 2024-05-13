@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,7 @@ namespace GestorDeEstudantes7
 
         private void Login_Form_Load(object sender, EventArgs e)
         {
+           
 
         }
 
@@ -29,7 +31,35 @@ namespace GestorDeEstudantes7
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
+            //Criar um objeto de classe "meuBancoDeDados".
+            meuBancoDeDados meuBancoDeDados = new meuBancoDeDados();
 
+            MySqlDataAdapter meuAdaptadorSql = new MySqlDataAdapter();
+            DataTable tabelaDeDados = new DataTable();
+            MySqlCommand comandoSql = new MySqlCommand("SELECT * FROM `usuários` WHERE `nome_de_usuário`= @usuario AND `senha`= @senha", meuBancoDeDados.getConexao);
+
+            //Incluindo o "@usuario" e "@senha".
+            comandoSql.Parameters.Add("@usuario", MySqlDbType.VarChar).Value = TextBoxUsuário.Text;
+            comandoSql.Parameters.Add("@senha", MySqlDbType.VarChar).Value = textBoxSenha.Text;
+
+            meuAdaptadorSql.SelectCommand = comandoSql;
+
+            meuAdaptadorSql.Fill(tabelaDeDados);
+
+            if (tabelaDeDados.Rows.Count > 0)
+            {
+                MessageBox.Show("Sim");
+            }
+            else 
+            {
+                MessageBox.Show("Não");
+            }
+        }
+
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
