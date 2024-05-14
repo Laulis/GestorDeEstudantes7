@@ -1,6 +1,6 @@
 ﻿namespace GestorDeEstudantes7
 {
-    partial class Login_Form
+    partial class FormLogin
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.textBoxSenha = new System.Windows.Forms.TextBox();
             this.TextBoxUsuário = new System.Windows.Forms.TextBox();
             this.buttonLogin = new System.Windows.Forms.Button();

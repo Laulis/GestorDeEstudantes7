@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace GestorDeEstudantes7
 {
-    public partial class Login_Form : Form
+    public partial class FormLogin : Form
     {
-        public Login_Form()
+        public FormLogin()
         {
             InitializeComponent();
         }
