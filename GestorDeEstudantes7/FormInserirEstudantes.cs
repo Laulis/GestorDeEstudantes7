@@ -92,7 +92,22 @@ namespace GestorDeEstudantes7
             if ((anoAtual - anoDeNascimento) < 10 ||  (anoAtual - anoDeNascimento ) > 100)
             {
                 MessageBox.Show("O aluno precisa ter entre 10 e 100 anos.", "Ano de Nascimento inválido.", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+            }
+            else if(Verificar())
+            {
+                pictureBoxFoto.Image.Save(foto, pictureBoxFoto.Image.RawFormat);
+                if(estudante.inserirEstudante(nome, sobrenome, nascimento, telefone, genero,endereco, foto))
+                {
+                    MessageBox.Show("Novo aluno cadastrado!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Aluno não cadastrado!", "Erro!", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Existem camposnão preenchidos!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
