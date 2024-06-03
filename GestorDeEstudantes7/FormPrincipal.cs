@@ -19,13 +19,19 @@ namespace GestorDeEstudantes7
 
         private void listaDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FormListarEstudante formListarEstudantes = new FormListarEstudante();
+            formListarEstudantes.Show();
         }
 
         private void novoEstudanteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormInserirEstudantes formInserirEstudantes = new FormInserirEstudantes();
             formInserirEstudantes.Show(this);
+        }
+
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

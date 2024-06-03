@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -35,5 +36,37 @@ namespace GestorDeEstudantes7
                 return false;
             }
         }
+
+        // Deletar o estudante.
+        public bool deletarEstudante(int id)
+        {
+            MySqlCommand comando =
+                new MySqlCommand("DELETE FROM `estudantes` WHERE `id` = @studentid", meuBancoDeDados.getConexao);
+            comando.Parameters.Add("@studentid", MySqlDbType.Int32).Value = id;
+
+            meuBancoDeDados.abrirConexao();
+
+            if (comando.ExecuteNonQuery() == 1)
+            {
+                meuBancoDeDados.fecharConexao();
+                return true;
+            }
+            else
+            {
+                meuBancoDeDados.fecharConexao();
+                return false;
+            }
+        }
+
+        public DataTable pegarEstudantes(MySqlCommand comando)
+        {
+            comando.Connection = meuBancoDeDados.getConexao;
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+            DataTable tabela = new DataTable();
+            adaptador.Fill(tabela);
+
+            return tabela;
+        }
     }
 }
+   

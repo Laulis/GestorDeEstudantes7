@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data">
-      <HintPath>..\..\..\..\Downloads\mysql-connector-net-8.4.0\v4.6.2\MySql.Data.dll</HintPath>
+      <HintPath>.\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -56,6 +56,12 @@
     <Compile Include="FormInserirEstudantes.Designer.cs">
       <DependentUpon>FormInserirEstudantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormListarEstudante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListarEstudante.Designer.cs">
+      <DependentUpon>FormListarEstudante.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormInserirEstudantes.resx">
       <DependentUpon>FormInserirEstudantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListarEstudante.resx">
+      <DependentUpon>FormListarEstudante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
