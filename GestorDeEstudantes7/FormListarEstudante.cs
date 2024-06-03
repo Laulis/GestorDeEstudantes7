@@ -44,6 +44,7 @@ namespace GestorDeEstudantes7
 
         private void buttonAtualizar_Click(object sender, EventArgs e)
         {
+            // Atualiza a lista de estudantes.
 
         }
 
@@ -65,6 +66,12 @@ namespace GestorDeEstudantes7
             colunaDeFotos.ImageLayout = DataGridViewImageCellLayout.Stretch;
             //Impede o usuário de incluir linhas
             GridViewListaDeAlunos.AllowUserToAddRows = false;
+        }
+
+        private void GridViewListaDeAlunos_DoubleClick(object sender, EventArgs e)
+        {
+            // Exibir as informações do estudante ao clicar nele duas vezes.
+
         }
     }
 }

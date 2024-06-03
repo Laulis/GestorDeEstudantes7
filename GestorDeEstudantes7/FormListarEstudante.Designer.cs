@@ -35,17 +35,19 @@
             // 
             // GridViewListaDeAlunos
             // 
+            this.GridViewListaDeAlunos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridViewListaDeAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridViewListaDeAlunos.Location = new System.Drawing.Point(303, 131);
+            this.GridViewListaDeAlunos.Location = new System.Drawing.Point(18, 12);
             this.GridViewListaDeAlunos.Name = "GridViewListaDeAlunos";
-            this.GridViewListaDeAlunos.Size = new System.Drawing.Size(240, 150);
+            this.GridViewListaDeAlunos.Size = new System.Drawing.Size(770, 352);
             this.GridViewListaDeAlunos.TabIndex = 0;
+            this.GridViewListaDeAlunos.DoubleClick += new System.EventHandler(this.GridViewListaDeAlunos_DoubleClick);
             // 
             // buttonAtualizar
             // 
-            this.buttonAtualizar.Location = new System.Drawing.Point(40, 347);
+            this.buttonAtualizar.Location = new System.Drawing.Point(46, 370);
             this.buttonAtualizar.Name = "buttonAtualizar";
-            this.buttonAtualizar.Size = new System.Drawing.Size(467, 55);
+            this.buttonAtualizar.Size = new System.Drawing.Size(726, 68);
             this.buttonAtualizar.TabIndex = 1;
             this.buttonAtualizar.Text = "Atualizar";
             this.buttonAtualizar.UseVisualStyleBackColor = true;
