@@ -110,5 +110,10 @@ namespace GestorDeEstudantes7
                 MessageBox.Show("Existem camposnão preenchidos!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

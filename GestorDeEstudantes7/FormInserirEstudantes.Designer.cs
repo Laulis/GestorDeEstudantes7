@@ -31,8 +31,8 @@
             this.pictureBoxFoto = new System.Windows.Forms.PictureBox();
             this.dateTimeDataDeNascimento = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButtonMasc = new System.Windows.Forms.RadioButton();
             this.radioButtonFem = new System.Windows.Forms.RadioButton();
+            this.radioButtonMasc = new System.Windows.Forms.RadioButton();
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxTelefone = new System.Windows.Forms.TextBox();
@@ -76,6 +76,17 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
+            // radioButtonFem
+            // 
+            this.radioButtonFem.AutoSize = true;
+            this.radioButtonFem.Location = new System.Drawing.Point(132, 19);
+            this.radioButtonFem.Name = "radioButtonFem";
+            this.radioButtonFem.Size = new System.Drawing.Size(67, 17);
+            this.radioButtonFem.TabIndex = 4;
+            this.radioButtonFem.TabStop = true;
+            this.radioButtonFem.Text = "Feminino";
+            this.radioButtonFem.UseVisualStyleBackColor = true;
+            // 
             // radioButtonMasc
             // 
             this.radioButtonMasc.AutoSize = true;
@@ -87,17 +98,6 @@
             this.radioButtonMasc.Text = "Masculino";
             this.radioButtonMasc.UseVisualStyleBackColor = true;
             this.radioButtonMasc.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // radioButtonFem
-            // 
-            this.radioButtonFem.AutoSize = true;
-            this.radioButtonFem.Location = new System.Drawing.Point(132, 19);
-            this.radioButtonFem.Name = "radioButtonFem";
-            this.radioButtonFem.Size = new System.Drawing.Size(67, 17);
-            this.radioButtonFem.TabIndex = 4;
-            this.radioButtonFem.TabStop = true;
-            this.radioButtonFem.Text = "Feminino";
-            this.radioButtonFem.UseVisualStyleBackColor = true;
             // 
             // textBoxNome
             // 
@@ -114,6 +114,7 @@
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Nome";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBoxTelefone
             // 
