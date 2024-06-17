@@ -43,13 +43,13 @@
             this.labelId = new System.Windows.Forms.Label();
             this.textBoxId = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButtonFem = new System.Windows.Forms.RadioButton();
-            this.radioButtonMasc = new System.Windows.Forms.RadioButton();
+            this.radioButtonFeminino = new System.Windows.Forms.RadioButton();
+            this.radioButtonMasculino = new System.Windows.Forms.RadioButton();
             this.dateTimeDataDeNascimento = new System.Windows.Forms.DateTimePicker();
             this.pictureBoxFoto = new System.Windows.Forms.PictureBox();
             this.buttonApagar = new System.Windows.Forms.Button();
             this.labelNome = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dateTimePickerNascimento = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).BeginInit();
             this.SuspendLayout();
@@ -176,35 +176,35 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButtonFem);
-            this.groupBox1.Controls.Add(this.radioButtonMasc);
+            this.groupBox1.Controls.Add(this.radioButtonFeminino);
+            this.groupBox1.Controls.Add(this.radioButtonMasculino);
             this.groupBox1.Location = new System.Drawing.Point(146, 294);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(230, 49);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             // 
-            // radioButtonFem
+            // radioButtonFeminino
             // 
-            this.radioButtonFem.AutoSize = true;
-            this.radioButtonFem.Location = new System.Drawing.Point(132, 19);
-            this.radioButtonFem.Name = "radioButtonFem";
-            this.radioButtonFem.Size = new System.Drawing.Size(67, 17);
-            this.radioButtonFem.TabIndex = 4;
-            this.radioButtonFem.TabStop = true;
-            this.radioButtonFem.Text = "Feminino";
-            this.radioButtonFem.UseVisualStyleBackColor = true;
+            this.radioButtonFeminino.AutoSize = true;
+            this.radioButtonFeminino.Location = new System.Drawing.Point(132, 19);
+            this.radioButtonFeminino.Name = "radioButtonFeminino";
+            this.radioButtonFeminino.Size = new System.Drawing.Size(67, 17);
+            this.radioButtonFeminino.TabIndex = 4;
+            this.radioButtonFeminino.TabStop = true;
+            this.radioButtonFeminino.Text = "Feminino";
+            this.radioButtonFeminino.UseVisualStyleBackColor = true;
             // 
-            // radioButtonMasc
+            // radioButtonMasculino
             // 
-            this.radioButtonMasc.AutoSize = true;
-            this.radioButtonMasc.Location = new System.Drawing.Point(11, 19);
-            this.radioButtonMasc.Name = "radioButtonMasc";
-            this.radioButtonMasc.Size = new System.Drawing.Size(73, 17);
-            this.radioButtonMasc.TabIndex = 3;
-            this.radioButtonMasc.TabStop = true;
-            this.radioButtonMasc.Text = "Masculino";
-            this.radioButtonMasc.UseVisualStyleBackColor = true;
+            this.radioButtonMasculino.AutoSize = true;
+            this.radioButtonMasculino.Location = new System.Drawing.Point(11, 19);
+            this.radioButtonMasculino.Name = "radioButtonMasculino";
+            this.radioButtonMasculino.Size = new System.Drawing.Size(73, 17);
+            this.radioButtonMasculino.TabIndex = 3;
+            this.radioButtonMasculino.TabStop = true;
+            this.radioButtonMasculino.Text = "Masculino";
+            this.radioButtonMasculino.UseVisualStyleBackColor = true;
             // 
             // dateTimeDataDeNascimento
             // 
@@ -229,6 +229,7 @@
             this.buttonApagar.TabIndex = 34;
             this.buttonApagar.Text = "Apagar";
             this.buttonApagar.UseVisualStyleBackColor = true;
+            this.buttonApagar.Click += new System.EventHandler(this.buttonApagar_Click);
             // 
             // labelNome
             // 
@@ -239,12 +240,12 @@
             this.labelNome.TabIndex = 36;
             this.labelNome.Text = "Nome";
             // 
-            // textBox1
+            // dateTimePickerNascimento
             // 
-            this.textBox1.Location = new System.Drawing.Point(403, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(252, 20);
-            this.textBox1.TabIndex = 35;
+            this.dateTimePickerNascimento.Location = new System.Drawing.Point(403, 85);
+            this.dateTimePickerNascimento.Name = "dateTimePickerNascimento";
+            this.dateTimePickerNascimento.Size = new System.Drawing.Size(252, 20);
+            this.dateTimePickerNascimento.TabIndex = 35;
             // 
             // FormAtualizarApagarEstudante
             // 
@@ -252,7 +253,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.labelNome);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dateTimePickerNascimento);
             this.Controls.Add(this.buttonApagar);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.buttonBuscar);
@@ -282,8 +283,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.RadioButton radioButtonFem;
-        private System.Windows.Forms.RadioButton radioButtonMasc;
+        private System.Windows.Forms.RadioButton radioButtonFeminino;
+        private System.Windows.Forms.RadioButton radioButtonMasculino;
         internal System.Windows.Forms.Button buttonBuscar;
         internal System.Windows.Forms.Button buttonEnviarFoto;
         internal System.Windows.Forms.Label label7;
@@ -292,7 +293,7 @@
         internal System.Windows.Forms.TextBox textBoxId;
         internal System.Windows.Forms.PictureBox pictureBoxFoto;
         internal System.Windows.Forms.Label labelNome;
-        internal System.Windows.Forms.TextBox textBox1;
+        internal System.Windows.Forms.TextBox dateTimePickerNascimento;
         internal System.Windows.Forms.Button buttonSalvar;
         internal System.Windows.Forms.Label label6;
         internal System.Windows.Forms.Label label5;

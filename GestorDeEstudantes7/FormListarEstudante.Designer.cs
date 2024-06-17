@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.GridViewListaDeAlunos = new System.Windows.Forms.DataGridView();
+            this.dataGridViewListaDeEstudantes = new System.Windows.Forms.DataGridView();
             this.buttonAtualizar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.GridViewListaDeAlunos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaDeEstudantes)).BeginInit();
             this.SuspendLayout();
             // 
-            // GridViewListaDeAlunos
+            // dataGridViewListaDeEstudantes
             // 
-            this.GridViewListaDeAlunos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GridViewListaDeAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridViewListaDeAlunos.Location = new System.Drawing.Point(18, 12);
-            this.GridViewListaDeAlunos.Name = "GridViewListaDeAlunos";
-            this.GridViewListaDeAlunos.Size = new System.Drawing.Size(770, 352);
-            this.GridViewListaDeAlunos.TabIndex = 0;
-            this.GridViewListaDeAlunos.DoubleClick += new System.EventHandler(this.GridViewListaDeAlunos_DoubleClick);
+            this.dataGridViewListaDeEstudantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewListaDeEstudantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewListaDeEstudantes.Location = new System.Drawing.Point(18, 12);
+            this.dataGridViewListaDeEstudantes.Name = "dataGridViewListaDeEstudantes";
+            this.dataGridViewListaDeEstudantes.Size = new System.Drawing.Size(770, 352);
+            this.dataGridViewListaDeEstudantes.TabIndex = 0;
+            this.dataGridViewListaDeEstudantes.DoubleClick += new System.EventHandler(this.GridViewListaDeAlunos_DoubleClick);
             // 
             // buttonAtualizar
             // 
@@ -59,18 +59,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.buttonAtualizar);
-            this.Controls.Add(this.GridViewListaDeAlunos);
+            this.Controls.Add(this.dataGridViewListaDeEstudantes);
             this.Name = "FormListarEstudante";
             this.Text = "Listar Estudantes";
             this.Load += new System.EventHandler(this.FormListarEstudante_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.GridViewListaDeAlunos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaDeEstudantes)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView GridViewListaDeAlunos;
+        private System.Windows.Forms.DataGridView dataGridViewListaDeEstudantes;
         private System.Windows.Forms.Button buttonAtualizar;
     }
 }

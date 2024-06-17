@@ -115,5 +115,10 @@ namespace GestorDeEstudantes7
         {
 
         }
+
+        private void FormInserirEstudantes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

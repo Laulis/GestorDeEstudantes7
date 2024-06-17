@@ -33,5 +33,10 @@ namespace GestorDeEstudantes7
                 pictureBoxFoto.Image = Image.FromFile(procurarFoto.FileName);
             }
         }
+
+        private void buttonApagar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

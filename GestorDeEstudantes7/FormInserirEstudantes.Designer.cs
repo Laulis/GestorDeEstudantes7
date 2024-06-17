@@ -247,6 +247,7 @@
             this.Controls.Add(this.pictureBoxFoto);
             this.Name = "FormInserirEstudantes";
             this.Text = "FormInserirEstudantes";
+            this.Load += new System.EventHandler(this.FormInserirEstudantes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

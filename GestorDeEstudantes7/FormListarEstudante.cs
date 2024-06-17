@@ -26,19 +26,19 @@ namespace GestorDeEstudantes7
             //Preenche o dataGridView com as informações dos estudantes.
 
             MySqlCommand comando = new MySqlCommand("SELECT * FROM `estudante`");
-            GridViewListaDeAlunos.ReadOnly = true;
+            dataGridViewListaDeEstudantes.ReadOnly = true;
 
             //Cria uma coluna para exibir as fotos dos alunos.
             DataGridViewImageColumn colunaDeFotos = new DataGridViewImageColumn();
             //Determina uma altura padrão para as linhas da tabelas
-            GridViewListaDeAlunos.RowTemplate.Height = 80;
+            dataGridViewListaDeEstudantes.RowTemplate.Height = 80;
             //Determina a origem da tabela
-            GridViewListaDeAlunos.DataSource = estudante.pegarEstudantes(comando);
+            dataGridViewListaDeEstudantes.DataSource = estudante.pegarEstudantes(comando);
             //Determinar qual será a coluna com as imagens
-            colunaDeFotos = (DataGridViewImageColumn)GridViewListaDeAlunos.Columns[7];
+            colunaDeFotos = (DataGridViewImageColumn)dataGridViewListaDeEstudantes.Columns[7];
             colunaDeFotos.ImageLayout = DataGridViewImageCellLayout.Stretch;
             //Impede o usuário de incluir linhas
-            GridViewListaDeAlunos.AllowUserToAddRows = false;
+            dataGridViewListaDeEstudantes.AllowUserToAddRows = false;
 
         }
 
@@ -53,25 +53,41 @@ namespace GestorDeEstudantes7
             //Preenche o dataGridView com as informações dos estudantes.
 
             MySqlCommand comando = new MySqlCommand("SELECT * FROM `estudantes`");
-            GridViewListaDeAlunos.ReadOnly = true;
+            dataGridViewListaDeEstudantes.ReadOnly = true;
 
             //Cria uma coluna para exibir as fotos dos alunos.
             DataGridViewImageColumn colunaDeFotos = new DataGridViewImageColumn();
             //Determina uma altura padrão para as linhas da tabelas
-            GridViewListaDeAlunos.RowTemplate.Height = 80;
+            dataGridViewListaDeEstudantes.RowTemplate.Height = 80;
             //Determina a origem da tabela
-            GridViewListaDeAlunos.DataSource = estudante.pegarEstudantes(comando);
+            dataGridViewListaDeEstudantes.DataSource = estudante.pegarEstudantes(comando);
             //Determinar qual será a coluna com as imagens
-            colunaDeFotos = (DataGridViewImageColumn)GridViewListaDeAlunos.Columns[7];
+            colunaDeFotos = (DataGridViewImageColumn)dataGridViewListaDeEstudantes.Columns[7];
             colunaDeFotos.ImageLayout = DataGridViewImageCellLayout.Stretch;
             //Impede o usuário de incluir linhas
-            GridViewListaDeAlunos.AllowUserToAddRows = false;
+            dataGridViewListaDeEstudantes.AllowUserToAddRows = false;
         }
 
         private void GridViewListaDeAlunos_DoubleClick(object sender, EventArgs e)
         {
             // Exibir as informações do estudante ao clicar nele duas vezes.
+            FormAtualizarApagarEstudante formAtualizarApagarEstudante = new FormAtualizarApagarEstudante();
 
+            formAtualizarApagarEstudante.textBoxId.Text = dataGridViewListaDeEstudantes.CurrentRow.Cells[0].Value.ToString();
+            formAtualizarApagarEstudante.dateTimePickerNascimento.Text = dataGridViewListaDeEstudantes.CurrentRow.Cells[0].Value.ToString();
+            formAtualizarApagarEstudante.textBoxSobrenome.Text = dataGridViewListaDeEstudantes.CurrentRow.Cells[0].Value.ToString();
+
+            formAtualizarApagarEstudante.dateTimeDataDeNascimento.Value = (DateTime) dataGridViewListaDeEstudantes.CurrentRow.Cells[3].Value;
+
+            if (dataGridViewListaDeEstudantes.CurrentRow.Cells[4].Value.ToString() == "Feminino")
+            {
+                formAtualizarApagarEstudante.radioButtonFeminino.Checked = true;
+            }
+            else
+            {
+                formAtualizarApagarEstudante.radioButtonMasculino
+
+            }    
         }
     }
 }
