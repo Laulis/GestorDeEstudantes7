@@ -79,15 +79,18 @@ namespace GestorDeEstudantes7
 
             formAtualizarApagarEstudante.dateTimeDataDeNascimento.Value = (DateTime) dataGridViewListaDeEstudantes.CurrentRow.Cells[3].Value;
 
-            if (dataGridViewListaDeEstudantes.CurrentRow.Cells[4].Value.ToString() == "Feminino")
+            if (dataGridViewLista.CurrentRow.Cells[4].Value.ToString() == "Feminino")
             {
-                formAtualizarApagarEstudante.radioButtonFeminino.Checked = true;
+               formAtualizarApagarEstudante.radioButtonFeminino.Checked = true;
             }
             else
             {
-                formAtualizarApagarEstudante.radioButtonMasculino
+                formAtualizarApagarEstudante.radioButtonMasculino.Checked = true;
+            }
 
-            }    
+            formAtualizarApagarEstudante.textBoxTelefone.Text = dataGridViewLista.CurrentRow.Cells[5].Value.ToString();
+            formAtualizarApagarEstudante.textBoxEndereco.Text = dataGridViewLista.CurrentRow.Cells[6].Value.ToString();
+
         }
     }
 }

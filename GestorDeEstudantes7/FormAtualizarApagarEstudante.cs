@@ -36,7 +36,17 @@ namespace GestorDeEstudantes7
 
         private void buttonApagar_Click(object sender, EventArgs e)
         {
+            //Referência a Id do aluno.
+            int idDoAluno = Convert.ToInt32(textBoxId.Text);
 
+            //Mostra uma caixa de diálogo perguntando se o usuário tem certeza de que quer apagar o aluno.
+            if(MessageBox.Show("Tem certeza que deseja apagar o studante?", "Apagar estudante", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                 if(Estudante.apagarEstudante(idDoAluno))
+                {
+                    MessageBox.Show("Aluno apagado!", "Apagar aluno", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }
