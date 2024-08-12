@@ -36,12 +36,18 @@ namespace GestorDeEstudantesT7
 
         private void label3_Click(object sender, EventArgs e)
         {
-
+            // Ao tirar o mouse do texto, altera a cor do PAINEL para a cor original
+            // do PAINEL e a cor do texto para a cor preta.
+            panelTotal.BackColor = corPainelTotal;
+            labelTotal.ForeColor = Color.Black;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
+            // Ao tirar o mouse do texto, altera a cor do PAINEL para a cor original
+            // do PAINEL e a cor do texto para a cor preta.
+            panelTotal.BackColor = corPainelTotal;
+            labelTotal.ForeColor = Color.Black;
         }
     }
 }

@@ -107,5 +107,34 @@ namespace GestorDeEstudantesT7
             }
 
         }
+
+        //Função que faz a contagem de alunos.
+        public string fazerContagem(string pesquisa)
+        {
+            MySqlCommand comamdo = new MySqlCommand(pesquisa, meuBancoDeDados.getConexao);
+
+            meuBancoDeDados.abrirConexao();
+            //a pesquisa
+            string contagem = comamdo.ExecuteScalar().ToString();
+            meuBancoDeDados.fecharConexao();
+
+            return contagem;
+        }
+
+        //pega o total de estudantes.
+        public string totalEstudantes()
+        {
+            return fazerContagem("SELECT COUNT(*) FROM 'estudantes'");
+        }
+
+        public string totalEstudantesMeninos()
+        {
+            return fazerContagem("SELECT COUNT(*) FROM 'estudantes' WHERE 'genero'='Masculino'");
+        }
+
+        public string totalEstudantesMeninas()
+        {
+            return fazerContagem("SELECT COUNT(*) FROM 'estudantes' WHERE 'genero'='Feminino'");
+        }
     }
 }

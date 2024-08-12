@@ -105,7 +105,7 @@
             this.Controls.Add(this.panelMeninos);
             this.Controls.Add(this.panelTotal);
             this.Name = "FormEstatisticas";
-            this.Text = "FormEstatisticas";
+            this.Text = "SGA Estatisticas";
             this.Load += new System.EventHandler(this.FormEstatisticas_Load);
             this.panelTotal.ResumeLayout(false);
             this.panelTotal.PerformLayout();
